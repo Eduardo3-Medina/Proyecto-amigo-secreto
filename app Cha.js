@@ -8,7 +8,7 @@ function lista (nombre) {
 
 function agregarAmigo() {
     let nombre = document.getElementById("amigo").value;
-    listaNombres += '' + nombre;
+    listaNombres.push(nombre);
     console.log(listaNombres);
     limpiarCaja()
 }
