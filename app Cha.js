@@ -4,6 +4,7 @@
 //VARIABLES
 let listaNombres = [];
 
+
 //FUNCION PARA AGREGAR AMIGOS.
 function agregarAmigo() {
     let nombre = document.getElementById("amigo").value;
@@ -20,7 +21,7 @@ function agregarAmigo() {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
-
+// FUNCION PARA COLOCAR EN UNA LISTA CADA UNO DE LOS NOMBRES.
 function actualizarLista() {
     let enlistado = document.querySelector(".result-list");
     enlistado.innerHTML = ""; // Limpiar la lista antes de actualizar
@@ -29,4 +30,14 @@ function actualizarLista() {
         li.textContent = nombre;
         enlistado.appendChild(li);
     });
+}
+
+//FUNCION PARA SORTEAR LOS NOMBRES.
+function sortearAmigo() {
+    let nombreAleatorio = listaNombres[Math.floor(Math.random()*listaNombres.length)];
+    console.log(nombreAleatorio)
+    while (listaNombres > 0) {
+        let nombreEliminado = listaNombres.splice(nombreAleatorio,1)[0];
+        console.log(nombreEliminado);
+    }
 }
