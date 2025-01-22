@@ -8,18 +8,29 @@ let listaNombres = [];
 function agregarAmigo() {
     let nombre = document.getElementById("amigo").value;
     if (nombre === "") {
+<<<<<<< HEAD
         alert("Por favor, inserte un nombre.")
     } else {
         listaNombres.push(nombre);
     }
     console.log(listaNombres);
     limpiarCaja()
+=======
+        alert("Ingrese nombre por favor");
+    } else {
+        listaNombres.push(nombre);
+        actualizarLista();
+    }
+    limpiarCaja();
+>>>>>>> main
 }
 
 //FUNCION PARA LIMPIAR LA CAJA DE ENTRADA.
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
+}
 
+<<<<<<< HEAD
 }
 
 //OBTENER EL ELEMENTO DE LA LISTA.
@@ -32,3 +43,14 @@ for (let i of listaNombres) {
     enlistar.appendChild(li);
     console.log(i)
 }
+=======
+function actualizarLista() {
+    let enlistado = document.querySelector(".result-list");
+    enlistado.innerHTML = ""; // Limpiar la lista antes de actualizar
+    listaNombres.forEach((nombre) => {
+        let li = document.createElement("li");
+        li.textContent = nombre;
+        enlistado.appendChild(li);
+    });
+}
+>>>>>>> main
