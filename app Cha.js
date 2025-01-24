@@ -23,7 +23,7 @@ function limpiarCaja() {
 }
 // FUNCION PARA COLOCAR EN UNA LISTA CADA UNO DE LOS NOMBRES.
 function actualizarLista() {
-    let enlistado = document.querySelector(".result-list");
+    let enlistado = document.querySelector("#listaAmigos");
     enlistado.innerHTML = ""; // Limpiar la lista antes de actualizar
     listaNombres.forEach((nombre) => {
         let li = document.createElement("li");
@@ -32,12 +32,21 @@ function actualizarLista() {
     });
 }
 
-//FUNCION PARA SORTEAR LOS NOMBRES.
-function sortearAmigo() {
-    let nombreAleatorio = listaNombres[Math.floor(Math.random()*listaNombres.length)];
-    console.log(nombreAleatorio)
-    while (listaNombres > 0) {
+
+    /* while (listaNombres > 0) {
         let nombreEliminado = listaNombres.splice(nombreAleatorio,1)[0];
         console.log(nombreEliminado);
+    } */
+
+function sortearAmigo() {
+    if (listaNombres.length === 0) {
+        alert("La lista esta vacia.");
+        return;
     }
+    let indiceAleatorio = Math.floor(Math.random()*listaNombres.length);
+    let amigoSorteado = listaNombres[indiceAleatorio];
+
+    document.getElementById("resultado").textContent = `tu amigo secreto es: ${amigoSorteado}`
+
+    listaNombres.splice(indiceAleatorio,1);
 }
