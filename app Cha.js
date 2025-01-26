@@ -7,7 +7,7 @@ let enumeracion = 0;
 
 //FUNCION PARA AGREGAR AMIGOS.
 function agregarAmigo() {
-    let nombre = document.getElementById("amigo").value;
+    let nombre = document.getElementById("amigo").value.trim();
     if (nombre === "") {
         alert("Ingrese nombre por favor");
     } else {
@@ -44,4 +44,9 @@ function sortearAmigo() {
     document.getElementById("resultado").textContent = `tu amigo secreto es: ${amigoSorteado}`
 
     listaNombres.splice(indiceAleatorio,1);
+    actualizarLista();
+
+    if (listaNombres.length === 0) {
+        alert("¡Todas las personas ya fueron sorteadas!")
+    }
 }
