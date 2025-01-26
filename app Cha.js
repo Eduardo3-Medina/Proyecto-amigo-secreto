@@ -3,7 +3,7 @@
 
 //VARIABLES
 let listaNombres = [];
-
+let enumeracion = 0;
 
 //FUNCION PARA AGREGAR AMIGOS.
 function agregarAmigo() {
@@ -25,12 +25,13 @@ function limpiarCaja() {
 function actualizarLista() {
     let enlistado = document.querySelector("#listaAmigos");
     enlistado.innerHTML = ""; // Limpiar la lista antes de actualizar
-    listaNombres.forEach((nombre) => {
+    listaNombres.forEach((nombre, index) => {
         let li = document.createElement("li");
-        li.textContent = nombre;
+        li.textContent = `${index + 1}. ${nombre}`;
         enlistado.appendChild(li);
     });
 }
+actualizarLista();
 
 function sortearAmigo() {
     if (listaNombres.length === 0) {
