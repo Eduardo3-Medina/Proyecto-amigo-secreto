@@ -32,15 +32,9 @@ function actualizarLista() {
     });
 }
 
-
-    /* while (listaNombres > 0) {
-        let nombreEliminado = listaNombres.splice(nombreAleatorio,1)[0];
-        console.log(nombreEliminado);
-    } */
-
 function sortearAmigo() {
     if (listaNombres.length === 0) {
-        alert("La lista esta vacia.");
+        alert("La lista esta vacia");
         return;
     }
     let indiceAleatorio = Math.floor(Math.random()*listaNombres.length);
