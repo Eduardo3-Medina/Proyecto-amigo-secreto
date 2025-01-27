@@ -23,5 +23,4 @@ Ideal para fiestas, intercambios de regalos o simplemente para pasar un buen rat
 ## 🥳 ¡Comparte la diversión!  
 ¿Te encantó el sorteo? Invita a tus amigos a probarlo y organiza una fiesta inolvidable.  
 
-
-🚀 [¡Pruébalo ahora!](https://eduardo3-medina.github.io/Proyecto-amigo-secreto/)  
+🚀 [¡Pruebalo Ahora!](https://eduardo3-medina.github.io/Proyecto-amigo-secreto/)  
